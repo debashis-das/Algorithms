@@ -5,12 +5,12 @@ package debashis.graph.represent;
 // representation of graphs using sets
 import java.util.*;
 
-class MapGraph{
+public class MapGraph{
 
     // TreeSet is used to get clear
 // understand of graph.
-    HashMap<Integer, TreeSet<Integer>> graph;
-    static int v;
+    public HashMap<Integer, TreeSet<Integer>> graph;
+    static int v = 5;
 
     // Graph Constructor
     public MapGraph()
