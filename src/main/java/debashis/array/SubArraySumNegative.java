@@ -1,6 +1,5 @@
 package debashis.array;
 
-import java.awt.geom.RectangularShape;
 import java.util.*;
 
 public class SubArraySumNegative {
