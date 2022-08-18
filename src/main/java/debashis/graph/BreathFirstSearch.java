@@ -4,6 +4,9 @@ import debashis.graph.represent.MapGraph;
 
 import java.util.*;
 
+/**
+ * Map & Adj list based implementation
+ */
 public class BreathFirstSearch {
 
     Set<Integer> visited = new HashSet<>();
