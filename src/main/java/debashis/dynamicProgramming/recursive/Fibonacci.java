@@ -1,4 +1,4 @@
-package debashis.dynamicProgramming;
+package debashis.dynamicProgramming.recursive;
 
 /**
  * Memorization

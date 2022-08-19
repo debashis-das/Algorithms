@@ -1,4 +1,4 @@
-package debashis.dynamicProgramming;
+package debashis.dynamicProgramming.recursive;
 
 import java.util.HashMap;
 import java.util.Map;

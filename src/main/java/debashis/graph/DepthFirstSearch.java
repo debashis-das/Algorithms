@@ -30,12 +30,33 @@ public class DepthFirstSearch {
         arrayGraph.addEdge( 1, 4);
         arrayGraph.addEdge( 2, 3);
         arrayGraph.addEdge( 3, 4);
-        arrayGraph.printGraph();
-        depthFirstSearch.dfsAdjacentList(arrayGraph.getAdj());
+//        arrayGraph.printGraph();
+        depthFirstSearch.dfsAdjacentList(arrayGraph.getAdj()).stream().forEach(System.out::print);
     }
 
     private List<Integer> dfsAdjacentList(int[][] graph){
-        return new ArrayList<>();
+        boolean[] visited = new boolean[graph.length];
+        List<Integer> result = new ArrayList<>();
+        /**
+         * out loop makes sure that no disjoint nodes and left
+         */
+        for(int i=0;i<graph.length;i++){
+            if(visited[i])
+                continue;
+            Stack<Integer> stack = new Stack<>();
+            stack.push(i);
+            while(!stack.isEmpty()){
+                int currentElement = stack.pop();
+                result.add(currentElement);
+                visited[currentElement] = true;
+                for(int j=0;j<graph[currentElement].length;j++){
+                    if(currentElement!=j && graph[currentElement][j] == 1 && !visited[j]){
+                        stack.push(j);
+                    }
+                }
+            }
+        }
+        return result;
     }
 
     /**Map based implementation**/
